@@ -1,0 +1,15 @@
+/Users/edinamyaoahadzie/Projects/DigitalGarden/Core/Application/DigitalGarden.Application/bin/Debug/net8.0/DigitalGarden.Application.deps.json
+/Users/edinamyaoahadzie/Projects/DigitalGarden/Core/Application/DigitalGarden.Application/bin/Debug/net8.0/DigitalGarden.Application.dll
+/Users/edinamyaoahadzie/Projects/DigitalGarden/Core/Application/DigitalGarden.Application/bin/Debug/net8.0/DigitalGarden.Application.pdb
+/Users/edinamyaoahadzie/Projects/DigitalGarden/Core/Application/DigitalGarden.Application/bin/Debug/net8.0/DigitalGarden.Domain.dll
+/Users/edinamyaoahadzie/Projects/DigitalGarden/Core/Application/DigitalGarden.Application/bin/Debug/net8.0/DigitalGarden.Domain.pdb
+/Users/edinamyaoahadzie/Projects/DigitalGarden/Core/Application/DigitalGarden.Application/obj/Debug/net8.0/DigitalGarden.Application.csproj.AssemblyReference.cache
+/Users/edinamyaoahadzie/Projects/DigitalGarden/Core/Application/DigitalGarden.Application/obj/Debug/net8.0/DigitalGarden.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/edinamyaoahadzie/Projects/DigitalGarden/Core/Application/DigitalGarden.Application/obj/Debug/net8.0/DigitalGarden.Application.AssemblyInfoInputs.cache
+/Users/edinamyaoahadzie/Projects/DigitalGarden/Core/Application/DigitalGarden.Application/obj/Debug/net8.0/DigitalGarden.Application.AssemblyInfo.cs
+/Users/edinamyaoahadzie/Projects/DigitalGarden/Core/Application/DigitalGarden.Application/obj/Debug/net8.0/DigitalGarden.Application.csproj.CoreCompileInputs.cache
+/Users/edinamyaoahadzie/Projects/DigitalGarden/Core/Application/DigitalGarden.Application/obj/Debug/net8.0/DigitalGarden.Application.csproj.CopyComplete
+/Users/edinamyaoahadzie/Projects/DigitalGarden/Core/Application/DigitalGarden.Application/obj/Debug/net8.0/DigitalGarden.Application.dll
+/Users/edinamyaoahadzie/Projects/DigitalGarden/Core/Application/DigitalGarden.Application/obj/Debug/net8.0/refint/DigitalGarden.Application.dll
+/Users/edinamyaoahadzie/Projects/DigitalGarden/Core/Application/DigitalGarden.Application/obj/Debug/net8.0/DigitalGarden.Application.pdb
+/Users/edinamyaoahadzie/Projects/DigitalGarden/Core/Application/DigitalGarden.Application/obj/Debug/net8.0/ref/DigitalGarden.Application.dll

@@ -1,0 +1,12 @@
+/Users/edinamyaoahadzie/Projects/DigitalGarden/Core/Domain/DigitalGarden.Domain/bin/Debug/net8.0/DigitalGarden.Domain.deps.json
+/Users/edinamyaoahadzie/Projects/DigitalGarden/Core/Domain/DigitalGarden.Domain/bin/Debug/net8.0/DigitalGarden.Domain.dll
+/Users/edinamyaoahadzie/Projects/DigitalGarden/Core/Domain/DigitalGarden.Domain/bin/Debug/net8.0/DigitalGarden.Domain.pdb
+/Users/edinamyaoahadzie/Projects/DigitalGarden/Core/Domain/DigitalGarden.Domain/obj/Debug/net8.0/DigitalGarden.Domain.csproj.AssemblyReference.cache
+/Users/edinamyaoahadzie/Projects/DigitalGarden/Core/Domain/DigitalGarden.Domain/obj/Debug/net8.0/DigitalGarden.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/edinamyaoahadzie/Projects/DigitalGarden/Core/Domain/DigitalGarden.Domain/obj/Debug/net8.0/DigitalGarden.Domain.AssemblyInfoInputs.cache
+/Users/edinamyaoahadzie/Projects/DigitalGarden/Core/Domain/DigitalGarden.Domain/obj/Debug/net8.0/DigitalGarden.Domain.AssemblyInfo.cs
+/Users/edinamyaoahadzie/Projects/DigitalGarden/Core/Domain/DigitalGarden.Domain/obj/Debug/net8.0/DigitalGarden.Domain.csproj.CoreCompileInputs.cache
+/Users/edinamyaoahadzie/Projects/DigitalGarden/Core/Domain/DigitalGarden.Domain/obj/Debug/net8.0/DigitalGarden.Domain.dll
+/Users/edinamyaoahadzie/Projects/DigitalGarden/Core/Domain/DigitalGarden.Domain/obj/Debug/net8.0/refint/DigitalGarden.Domain.dll
+/Users/edinamyaoahadzie/Projects/DigitalGarden/Core/Domain/DigitalGarden.Domain/obj/Debug/net8.0/DigitalGarden.Domain.pdb
+/Users/edinamyaoahadzie/Projects/DigitalGarden/Core/Domain/DigitalGarden.Domain/obj/Debug/net8.0/ref/DigitalGarden.Domain.dll
