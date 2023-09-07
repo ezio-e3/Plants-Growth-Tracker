@@ -6,7 +6,7 @@ namespace DigitalGarden.Application;
 
 public class GetGarden : IRequest<IActionResult>
 {
-    public required Garden Gardener { get; set; }
+    public required GardenerModel Gardener { get; set; }
     public int? Id { get; set; }
 }
 public class GetGardenHandler : IRequestHandler<GetGarden, IActionResult>

@@ -13,3 +13,4 @@
 /Users/edinamyaoahadzie/Projects/DigitalGarden/Infrastructure/DigitalGarden.Infrastructure/obj/Debug/net8.0/refint/DigitalGarden.Infrastructure.dll
 /Users/edinamyaoahadzie/Projects/DigitalGarden/Infrastructure/DigitalGarden.Infrastructure/obj/Debug/net8.0/DigitalGarden.Infrastructure.pdb
 /Users/edinamyaoahadzie/Projects/DigitalGarden/Infrastructure/DigitalGarden.Infrastructure/obj/Debug/net8.0/ref/DigitalGarden.Infrastructure.dll
+/Users/edinamyaoahadzie/Projects/DigitalGarden/Infrastructure/DigitalGarden.Infrastructure/obj/Debug/net8.0/DigitalGarden.Infrastructure.sourcelink.json

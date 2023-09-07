@@ -82,3 +82,4 @@
 /Users/edinamyaoahadzie/Projects/DigitalGarden/Presentation/DigitalGarden.Presentation/bin/Debug/net8.0/MediatR.Contracts.dll
 /Users/edinamyaoahadzie/Projects/DigitalGarden/Presentation/DigitalGarden.Presentation/bin/Debug/net8.0/DigitalGarden.Application.dll
 /Users/edinamyaoahadzie/Projects/DigitalGarden/Presentation/DigitalGarden.Presentation/bin/Debug/net8.0/DigitalGarden.Application.pdb
+/Users/edinamyaoahadzie/Projects/DigitalGarden/Presentation/DigitalGarden.Presentation/obj/Debug/net8.0/DigitalGarden.Presentation.sourcelink.json

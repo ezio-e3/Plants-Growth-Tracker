@@ -14,9 +14,13 @@ public class PlantController : Controller
         Mediator = mediator;
     }
 
-    // [HttpGet]
-    // public async Task<IActionResult> Get([FromQuery] int? id)
-    //     => await Mediator.Send(new )
+     [HttpGet]
+    public async Task<IActionResult> GetAllPlants([FromQuery] GardenModel gardenModel) 
+        => await Mediator.Send(new GetPlants{Garden = gardenModel});
+
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetGardener([FromQuery] int id, [FromQuery] GardenModel gardenModel)
+        => await Mediator.Send(new GetPlants {Id = id, Garden = gardenModel});
 
     [HttpPost]
     public async Task<IActionResult> Create([FromBody] PlantModel model)

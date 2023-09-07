@@ -12,6 +12,13 @@ public IMediator Mediator { get; }
     {
         Mediator = mediator;
     }
+     [HttpGet]
+    public async Task<IActionResult> GetAllGardens([FromQuery] GardenerModel gardenerModel) 
+        => await Mediator.Send(new GetGarden{Gardener = gardenerModel});
+
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetGarden([FromQuery] int id, [FromQuery] GardenerModel gardenerModel)
+        => await Mediator.Send(new GetGarden {Id = id, Gardener = gardenerModel});
 
     [HttpPost]
     public async Task<IActionResult> Create([FromBody] GardenModel model)

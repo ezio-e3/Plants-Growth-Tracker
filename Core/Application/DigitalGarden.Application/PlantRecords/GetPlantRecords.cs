@@ -7,7 +7,7 @@ namespace DigitalGarden.Application;
 public class GetPlantRecords :  IRequest<IActionResult>
 {
 public int? Id {get; set;}
-public required Plant Plant {get; set;}
+public required PlantModel PlantModel {get; set;}
 }
 public class GetPlantRecordsHandler : IRequestHandler<GetPlantRecords, IActionResult>
 {
@@ -18,12 +18,12 @@ public class GetPlantRecordsHandler : IRequestHandler<GetPlantRecords, IActionRe
     public Task<IActionResult> Handle(GetPlantRecords request, CancellationToken cancellationToken)
     {
         if(request.Id == null){
-            var plantRecords = BaseContext.PlantRecords.Where(p => p.PlantId == request.Plant.Id).ToList();
+            var plantRecords = BaseContext.PlantRecords.Where(p => p.PlantId == request.PlantModel.Id).ToList();
             return Task.FromResult(new OkObjectResult(plantRecords) as IActionResult);
         }
 
         var plantRecord = BaseContext.PlantRecords.Where(p => request.Id == p.Id &&
-        request.Plant.Id == p.PlantId).FirstOrDefault();
+        request.PlantModel.Id == p.PlantId).FirstOrDefault();
         return Task.FromResult(plantRecord == null ? new BadRequestResult() as IActionResult
             : new OkObjectResult(plantRecord) as IActionResult);
     }

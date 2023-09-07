@@ -7,8 +7,8 @@ namespace DigitalGarden.Application;
 public class GetMaintenanceTask : IRequest<IActionResult>
 {
     public int? Id {get; set;}
-    public Plant? Plant {get; set;}
-    public Garden? Garden {get; set;}
+    public PlantModel? PlantModel {get; set;}
+    public GardenModel? GardenModel {get; set;}
 }
 public class GetMaintenanceTaskHandler : IRequestHandler<GetMaintenanceTask, IActionResult>
 {
@@ -18,22 +18,22 @@ public class GetMaintenanceTaskHandler : IRequestHandler<GetMaintenanceTask, IAc
     public BaseDigitalGardenContext BaseContext {get; set;}
     Task<IActionResult> IRequestHandler<GetMaintenanceTask, IActionResult>.Handle(GetMaintenanceTask request, CancellationToken cancellationToken)
     {
-        if (request.Plant != null){
+        if (request.PlantModel != null){
             if (request.Id == null){
-                var plantMaintenanceTasks = BaseContext.MaintenanceTasks.Where(m => m.PlantId == request.Plant.Id).ToList();
+                var plantMaintenanceTasks = BaseContext.MaintenanceTasks.Where(m => m.PlantId == request.PlantModel.Id).ToList();
                 return Task.FromResult(new OkObjectResult(plantMaintenanceTasks) as IActionResult);
             }
-            var plantMaintenanceTask = BaseContext.MaintenanceTasks.Where(m => m.PlantId == request.Plant.Id &&
+            var plantMaintenanceTask = BaseContext.MaintenanceTasks.Where(m => m.PlantId == request.PlantModel.Id &&
             m.Id == request.Id).FirstOrDefault();
             return Task.FromResult(plantMaintenanceTask == null ? new BadRequestResult() as IActionResult
                 : new OkObjectResult(plantMaintenanceTask) as IActionResult);
         }
-        else if (request.Garden != null){
+        else if (request.GardenModel != null){
             if (request.Id == null){
-                var gardenMaintenanceTasks = BaseContext.MaintenanceTasks.Where(m => m.GardenId == request.Garden.Id).ToList();
+                var gardenMaintenanceTasks = BaseContext.MaintenanceTasks.Where(m => m.GardenId == request.GardenModel.Id).ToList();
                 return Task.FromResult(new OkObjectResult(gardenMaintenanceTasks) as IActionResult);
             }
-            var gardenMaintenanceTask = BaseContext.MaintenanceTasks.Where(m => m.GardenId == request.Garden.Id &&
+            var gardenMaintenanceTask = BaseContext.MaintenanceTasks.Where(m => m.GardenId == request.GardenModel.Id &&
             m.Id == request.Id).FirstOrDefault();
             return Task.FromResult(gardenMaintenanceTask == null ? new BadRequestResult() as IActionResult
                 : new OkObjectResult(gardenMaintenanceTask) as IActionResult);

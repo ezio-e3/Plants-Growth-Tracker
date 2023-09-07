@@ -14,6 +14,14 @@ public IMediator Mediator { get; }
         Mediator = mediator;
     }
 
+    [HttpGet]
+    public async Task<IActionResult> GetAllReviews([FromQuery] PlantRecordModel plantRecordModel) 
+        => await Mediator.Send(new GetReviews{ PlantRecordModel = plantRecordModel});
+
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetGardener([FromQuery] int id, [FromQuery] PlantRecordModel plantRecordModel)
+        => await Mediator.Send(new GetReviews {Id = id,  PlantRecordModel= plantRecordModel});
+
     [HttpPost]
     public async Task<IActionResult> Create([FromBody] ReviewModel model)
         => await Mediator.Send(new CreateReview {Model = model});

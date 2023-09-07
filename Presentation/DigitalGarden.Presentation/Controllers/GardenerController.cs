@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DigitalGarden.Presentation;
 
-[Route("api/[Controller]")]
+[Route("api/[Controller]/[action]")]
 public class GardenerController : Controller
 {
 public IMediator Mediator { get; }
@@ -13,6 +13,14 @@ public IMediator Mediator { get; }
     {
         Mediator = mediator;
     }
+
+    [HttpGet]
+    public async Task<IActionResult> GetAllGardeners() 
+        => await Mediator.Send(new GetGardener{});
+
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetGardener([FromQuery] int? id)
+        => await Mediator.Send(new GetGardener {Id = id});
 
     [HttpPost]
     public async Task<IActionResult> Create([FromBody] GardenerModel model)

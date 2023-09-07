@@ -13,3 +13,4 @@
 /Users/edinamyaoahadzie/Projects/DigitalGarden/Core/Application/DigitalGarden.Application/obj/Debug/net8.0/refint/DigitalGarden.Application.dll
 /Users/edinamyaoahadzie/Projects/DigitalGarden/Core/Application/DigitalGarden.Application/obj/Debug/net8.0/DigitalGarden.Application.pdb
 /Users/edinamyaoahadzie/Projects/DigitalGarden/Core/Application/DigitalGarden.Application/obj/Debug/net8.0/ref/DigitalGarden.Application.dll
+/Users/edinamyaoahadzie/Projects/DigitalGarden/Core/Application/DigitalGarden.Application/obj/Debug/net8.0/DigitalGarden.Application.sourcelink.json

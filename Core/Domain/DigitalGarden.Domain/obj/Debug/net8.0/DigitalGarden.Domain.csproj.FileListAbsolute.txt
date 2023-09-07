@@ -10,3 +10,4 @@
 /Users/edinamyaoahadzie/Projects/DigitalGarden/Core/Domain/DigitalGarden.Domain/obj/Debug/net8.0/refint/DigitalGarden.Domain.dll
 /Users/edinamyaoahadzie/Projects/DigitalGarden/Core/Domain/DigitalGarden.Domain/obj/Debug/net8.0/DigitalGarden.Domain.pdb
 /Users/edinamyaoahadzie/Projects/DigitalGarden/Core/Domain/DigitalGarden.Domain/obj/Debug/net8.0/ref/DigitalGarden.Domain.dll
+/Users/edinamyaoahadzie/Projects/DigitalGarden/Core/Domain/DigitalGarden.Domain/obj/Debug/net8.0/DigitalGarden.Domain.sourcelink.json
