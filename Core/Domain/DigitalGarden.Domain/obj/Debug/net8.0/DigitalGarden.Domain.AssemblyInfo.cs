@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DigitalGarden.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a01328ae5e7ab31d0636b68dc4fd3e9758984075")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("DigitalGarden.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DigitalGarden.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

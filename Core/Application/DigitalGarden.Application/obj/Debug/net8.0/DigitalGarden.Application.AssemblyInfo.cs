@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DigitalGarden.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+66a3b5c9dda6aa1692a378f5b2d43c0af37be07f")]
 [assembly: System.Reflection.AssemblyProductAttribute("DigitalGarden.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DigitalGarden.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

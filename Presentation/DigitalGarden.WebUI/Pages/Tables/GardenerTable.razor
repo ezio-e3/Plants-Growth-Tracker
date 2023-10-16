@@ -1,0 +1,37 @@
+﻿@page "/gardenerTable"
+
+ @if(Gardeners.Count > 0){
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Gardens</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach(var gardener in Gardeners){
+                        <tr>
+                            <td class="align-middle">@gardener.Name</td>
+                            <td class="align-middle">@gardener.Email</td>
+                            <td class="align-middle">@gardener.Gardens</td>
+                            <td class="align-middle">
+                                <button type="button" class="btn btn-info">Update</button>
+                            </td>
+                            <td class="align-middle">
+                                <button type="button" class="btn btn-danger">Delete</button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        } else {
+            <span>
+                Loading
+            </span>
+        }
+
+@code {
+    [Parameter]
+    public List<GardenerModel>? Gardeners {get; set;}
+}

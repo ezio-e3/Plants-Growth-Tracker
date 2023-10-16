@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../buildMultiTargeting/DigitalGarden.WebUI.props" />
+</Project>

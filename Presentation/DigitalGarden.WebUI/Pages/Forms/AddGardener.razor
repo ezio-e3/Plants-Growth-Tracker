@@ -1,0 +1,72 @@
+﻿@page "/gardener/add"
+@* @page "/gardener/update{gardenerId:int}" *@
+@inject ILogger<GardenerModel> Logger
+
+<PageTitle>@title</PageTitle>
+
+<h2>@title</h2>
+
+<div class="row">
+    <div class="col-md-6">
+
+    </div>
+</div>
+
+<EditForm Model="@gardener" OnInvalidSubmit="@Save">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    <div class="form-group">
+        <label for="Full Name">Full Name</label>
+          <InputText class="form-control" @bind-Value="gardener!.Name" />
+          <ValidationMessage For="@(()=>gardener.Name)"/>
+    </div>
+
+    <div class="form-group">
+        <label for="Full Name">Email</label>
+          <InputText class="form-control" @bind-Value="gardener!.Email" />
+          <ValidationMessage For="@(()=>gardener.Email)"/>
+    </div>
+    
+    <div class="my-2">
+        @message
+    </div>
+    
+    <div class="my-2">
+        <button type="submit" class="btn btn-primary">Save</button>
+    </div>
+    @* <DataAnnotationsValidator />
+        <ValidationSummary />
+            <div>
+                <label>
+                     Full Name:
+                    <InputText @bind-Value="GardenerModel!.Name" />
+                </label>
+            </div>
+            <div>
+                <label>
+                     Email (optional):
+                    <InputText @bind-Value="GardenerModel!.Email" />
+                </label>
+            </div>
+            <div>
+                <button type="submit">Submit</button>
+            </div> *@
+</EditForm>
+
+@code {
+    [Parameter]
+    public int gardenerId {get; set;}
+    private GardenerModel? gardener {get; set;}
+    private string message = "";
+    private string title = "Add new gardener";
+        protected override void OnInitialized() 
+        {
+            gardener ??= new();
+        }
+    private void Save()
+    {
+        Logger.LogInformation("Name = {Name}" + "Email = {Email}", gardener?.Name, gardener?.Email);
+    }
+       
+
+}

@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalGarden.Infrastructur
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalGarden.Presentation", "Presentation\DigitalGarden.Presentation\DigitalGarden.Presentation.csproj", "{2602A6B4-64B6-4796-B59A-735F2676D0B6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalGarden.WebUI", "Presentation\DigitalGarden.WebUI\DigitalGarden.WebUI.csproj", "{9B2B3ACD-2FA2-4572-A2D5-EBF3E97B32FF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{2602A6B4-64B6-4796-B59A-735F2676D0B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2602A6B4-64B6-4796-B59A-735F2676D0B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2602A6B4-64B6-4796-B59A-735F2676D0B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B2B3ACD-2FA2-4572-A2D5-EBF3E97B32FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B2B3ACD-2FA2-4572-A2D5-EBF3E97B32FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B2B3ACD-2FA2-4572-A2D5-EBF3E97B32FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B2B3ACD-2FA2-4572-A2D5-EBF3E97B32FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -54,5 +60,6 @@ Global
 		{00B0D788-0970-438C-92C7-6E49D7617005} = {56DA4BD8-BB29-4653-9C7D-AA53DCDD603C}
 		{2266D88C-BC4F-4A10-B051-EE5CB7CDE77B} = {131EF5A6-66E5-4E6A-856C-98923199E535}
 		{2602A6B4-64B6-4796-B59A-735F2676D0B6} = {B145B71A-386F-4C43-887E-E6DA826F239A}
+		{9B2B3ACD-2FA2-4572-A2D5-EBF3E97B32FF} = {B145B71A-386F-4C43-887E-E6DA826F239A}
 	EndGlobalSection
 EndGlobal

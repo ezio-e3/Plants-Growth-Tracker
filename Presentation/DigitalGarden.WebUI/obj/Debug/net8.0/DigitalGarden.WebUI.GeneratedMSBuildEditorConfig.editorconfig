@@ -1,0 +1,63 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = DigitalGarden.WebUI
+build_property.RootNamespace = DigitalGarden.WebUI
+build_property.ProjectDir = /Users/edinamyaoahadzie/Projects/DigitalGarden/Presentation/DigitalGarden.WebUI/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /Users/edinamyaoahadzie/Projects/DigitalGarden/Presentation/DigitalGarden.WebUI
+build_property._RazorSourceGeneratorDebug = 
+
+[/Users/edinamyaoahadzie/Projects/DigitalGarden/Presentation/DigitalGarden.WebUI/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edinamyaoahadzie/Projects/DigitalGarden/Presentation/DigitalGarden.WebUI/Pages/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ291bnRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edinamyaoahadzie/Projects/DigitalGarden/Presentation/DigitalGarden.WebUI/Pages/FetchData.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRmV0Y2hEYXRhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edinamyaoahadzie/Projects/DigitalGarden/Presentation/DigitalGarden.WebUI/Pages/Forms/AddGardener.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRm9ybXMvQWRkR2FyZGVuZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edinamyaoahadzie/Projects/DigitalGarden/Presentation/DigitalGarden.WebUI/Pages/Gardener.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvR2FyZGVuZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edinamyaoahadzie/Projects/DigitalGarden/Presentation/DigitalGarden.WebUI/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edinamyaoahadzie/Projects/DigitalGarden/Presentation/DigitalGarden.WebUI/Pages/Tables/GardenerTable.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVGFibGVzL0dhcmRlbmVyVGFibGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edinamyaoahadzie/Projects/DigitalGarden/Presentation/DigitalGarden.WebUI/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edinamyaoahadzie/Projects/DigitalGarden/Presentation/DigitalGarden.WebUI/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL01haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-rcqlcrrikb
+
+[/Users/edinamyaoahadzie/Projects/DigitalGarden/Presentation/DigitalGarden.WebUI/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL05hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-sl0mjmnvkh
