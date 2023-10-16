@@ -6,7 +6,9 @@ namespace DigitalGarden.Application;
 
 public class DeleteMaintenance : IRequest<IActionResult>
 {
-    public int Id {get; set;}
+    public required int Id {get; set;}
+    public int? PlantId {get; set;}
+    public int? GardenId {get; set;}
 }
 public class DeleteMaintenanceHandler : IRequestHandler<DeleteMaintenance, IActionResult>
 {
@@ -17,7 +19,8 @@ public class DeleteMaintenanceHandler : IRequestHandler<DeleteMaintenance, IActi
     public Task<IActionResult> Handle(DeleteMaintenance request, CancellationToken cancellationToken)
     {
          //Fix ExecuteDelete() not working
-        var maintenanceTask = BaseContext.MaintenanceTasks.Find(request.Id);
+        var maintenanceTask = BaseContext.MaintenanceTasks.Where(m => m.Id == request.Id && 
+        (m.GardenId == request.GardenId || m.PlantId == request.PlantId)).FirstOrDefault();
         if (maintenanceTask == null)
             return Task.FromResult(new BadRequestObjectResult("Maintenance task does not exist") as IActionResult);
         BaseContext.Remove(maintenanceTask);

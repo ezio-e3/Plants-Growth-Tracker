@@ -7,7 +7,9 @@ namespace DigitalGarden.Application;
 public class GetReviews : IRequest<IActionResult>
 {
 public int? Id {get; set;}
-public required PlantRecordModel PlantRecordModel {get; set;}
+
+public required int PlantRecordId {get; set;}
+
 }
 public class GetReviewsHandler : IRequestHandler<GetReviews, IActionResult>{
     public GetReviewsHandler(BaseDigitalGardenContext baseDigitalGardenContext){
@@ -18,12 +20,12 @@ public class GetReviewsHandler : IRequestHandler<GetReviews, IActionResult>{
     public Task<IActionResult> Handle(GetReviews request, CancellationToken cancellationToken)
     {
          if(request.Id == null){
-            var reviews = BaseContext.Reviews.Where(p => p.PlantRecordId == request.PlantRecordModel.Id).ToList();
+            var reviews = BaseContext.Reviews.Where(p => p.PlantRecordId == request.PlantRecordId).ToList();
             return Task.FromResult(new OkObjectResult(reviews) as IActionResult);
         }
 
         var review = BaseContext.Reviews.Where(p => request.Id == p.Id &&
-        request.PlantRecordModel.Id == p.PlantRecordId).FirstOrDefault();
+        request.PlantRecordId == p.PlantRecordId).FirstOrDefault();
         return Task.FromResult(review == null ? new BadRequestResult() as IActionResult
             : new OkObjectResult(review) as IActionResult);
     }

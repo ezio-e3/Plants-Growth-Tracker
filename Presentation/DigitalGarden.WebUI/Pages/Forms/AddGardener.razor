@@ -1,4 +1,5 @@
 ﻿@page "/gardener/add"
+@inject IGardenerHttpClient Http
 @* @page "/gardener/update{gardenerId:int}" *@
 @inject ILogger<GardenerModel> Logger
 
@@ -61,6 +62,11 @@
     private string title = "Add new gardener";
         protected override void OnInitialized() 
         {
+            if(gardenerId > 0){
+                title = "Update gardener details";
+                //gardener = await Http.
+            
+            }
             gardener ??= new();
         }
     private void Save()

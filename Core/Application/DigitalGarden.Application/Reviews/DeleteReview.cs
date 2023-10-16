@@ -6,7 +6,9 @@ namespace DigitalGarden.Application;
 
 public class DeleteReview : IRequest<IActionResult>
 {
-    public int Id {get; set;}
+    public required int Id {get; set;}
+    public required int PlantRecordId {get; set;}
+
 }
 public class DeleteReviewHandler : IRequestHandler<DeleteReview, IActionResult>{
      public DeleteReviewHandler(BaseDigitalGardenContext baseDigitalGardenContext){
@@ -17,7 +19,7 @@ public class DeleteReviewHandler : IRequestHandler<DeleteReview, IActionResult>{
     public Task<IActionResult> Handle(DeleteReview request, CancellationToken cancellationToken)
     {
         //Fix ExecuteDelete() not working
-        var review = BaseContext.Reviews.Find(request.Id);
+        var review = BaseContext.Reviews.Where(r => r.Id == request.Id && r.PlantRecordId == request.PlantRecordId).FirstOrDefault();
         if (review == null)
             return Task.FromResult(new BadRequestObjectResult("Review does not exist") as IActionResult);
         BaseContext.Remove(review);

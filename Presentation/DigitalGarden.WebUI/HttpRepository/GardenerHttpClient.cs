@@ -12,15 +12,22 @@ public class GardenerHttpClient : IGardenerHttpClient
         Options = new JsonSerializerOptions{PropertyNameCaseInsensitive = true};
     }
 
+    public async Task<GardenerModel> GetGardener(int gardenerId)
+    {
+        var response = await HttpClient.GetAsync("Gardener/GetGardener/{gardenerId}");
+        var content = await response.Content.ReadAsStringAsync();
+        var gardener = JsonSerializer.Deserialize<GardenerModel>(content, Options);
+        return gardener;
+    }
+
     public async Task<List<GardenerModel>> GetGardeners()
     {
         var response = await HttpClient.GetAsync("Gardener/GetAllGardeners");
         var content = await response.Content.ReadAsStringAsync();
-        if(!response.IsSuccessStatusCode){
-            throw new ApplicationException();
-        }
+        // if(!response.IsSuccessStatusCode){
+        //     throw new ApplicationException();
+        // }
         var gardeners = JsonSerializer.Deserialize<List<GardenerModel>>(content, Options);
-        Console.WriteLine("EDINAM "+response.RequestMessage);
         return gardeners;
     }
 }

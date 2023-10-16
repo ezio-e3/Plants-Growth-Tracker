@@ -7,6 +7,8 @@ namespace DigitalGarden.Application;
 public class DeletePlantRecords : IRequest<IActionResult>
 {
     public int Id {get; set;}
+
+    public int PlantId {get; set;}
 }
 public class DeletePlantRecordsHandler : IRequestHandler<DeletePlantRecords, IActionResult>{
     public DeletePlantRecordsHandler(BaseDigitalGardenContext baseDigitalGardenContext){
@@ -17,7 +19,7 @@ public class DeletePlantRecordsHandler : IRequestHandler<DeletePlantRecords, IAc
     public Task<IActionResult> Handle(DeletePlantRecords request, CancellationToken cancellationToken)
     {
         //Fix ExecuteDelete() not working
-        var plantRecord = BaseContext.PlantRecords.Find(request.Id);
+        var plantRecord = BaseContext.PlantRecords.Where(p=> p.Id == request.Id && p.PlantId == request.PlantId);
         if (plantRecord == null)
             return Task.FromResult(new BadRequestObjectResult("Plant record does not exist") as IActionResult);
         BaseContext.Remove(plantRecord);

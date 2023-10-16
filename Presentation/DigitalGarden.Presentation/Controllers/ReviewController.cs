@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DigitalGarden.Presentation;
 
-[Route("api/[Controller]")]
+[Route("api/[Controller]/[action]")]
 public class ReviewController : Controller
 {
 public IMediator Mediator { get; }
@@ -14,15 +14,23 @@ public IMediator Mediator { get; }
         Mediator = mediator;
     }
 
-    [HttpGet]
-    public async Task<IActionResult> GetAllReviews([FromQuery] PlantRecordModel plantRecordModel) 
-        => await Mediator.Send(new GetReviews{ PlantRecordModel = plantRecordModel});
+    [HttpGet("{plantRecordId}")]
+    public async Task<IActionResult> GetReviews([FromQuery] int plantRecordId) 
+        => await Mediator.Send(new GetReviews{ PlantRecordId = plantRecordId});
 
-    [HttpGet("{id}")]
-    public async Task<IActionResult> GetGardener([FromQuery] int id, [FromQuery] PlantRecordModel plantRecordModel)
-        => await Mediator.Send(new GetReviews {Id = id,  PlantRecordModel= plantRecordModel});
+    [HttpGet("{id}/{plantRecordId}")]
+    public async Task<IActionResult> GetReview([FromQuery] int id, [FromQuery] int plantRecordId)
+        => await Mediator.Send(new GetReviews {Id = id,  PlantRecordId= plantRecordId});
 
     [HttpPost]
-    public async Task<IActionResult> Create([FromBody] ReviewModel model)
+    public async Task<IActionResult> CreateReview([FromBody] ReviewModel model)
         => await Mediator.Send(new CreateReview {Model = model});
+
+    [HttpPut("{id}/{plantRecordId}")]
+    public async Task<IActionResult> UpdateReview([FromQuery] int id, [FromQuery] int plantRecordId, [FromBody] ReviewModel model)
+        => await Mediator.Send(new UpdateReview {Id = id, PlantRecordId = plantRecordId, ReviewModel = model});
+
+    [HttpDelete("{id}/{plantRecordId}")]
+    public async Task<IActionResult> DeleteReview([FromQuery] int id, [FromQuery] int plantRecordId)
+        => await Mediator.Send(new DeleteReview {Id = id, PlantRecordId = plantRecordId});
 }

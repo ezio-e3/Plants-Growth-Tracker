@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DigitalGarden.Presentation;
 
-[Route("api/[Controller]")]
+[Route("api/[Controller]/[action]")]
 public class PlantController : Controller
 {
     public IMediator Mediator { get; }
@@ -14,16 +14,24 @@ public class PlantController : Controller
         Mediator = mediator;
     }
 
-     [HttpGet]
-    public async Task<IActionResult> GetAllPlants([FromQuery] GardenModel gardenModel) 
-        => await Mediator.Send(new GetPlants{Garden = gardenModel});
+     [HttpGet("{gardenId}")]
+    public async Task<IActionResult> GetPlants([FromQuery] int gardenId) 
+        => await Mediator.Send(new GetPlants{GardenId = gardenId});
 
-    [HttpGet("{id}")]
-    public async Task<IActionResult> GetGardener([FromQuery] int id, [FromQuery] GardenModel gardenModel)
-        => await Mediator.Send(new GetPlants {Id = id, Garden = gardenModel});
+    [HttpGet("{id}/{gardenId}")]
+    public async Task<IActionResult> GetPlant([FromQuery] int id, [FromQuery] int gardenId)
+        => await Mediator.Send(new GetPlants {Id = id, GardenId = gardenId});
 
     [HttpPost]
-    public async Task<IActionResult> Create([FromBody] PlantModel model)
+    public async Task<IActionResult> CreatePlant([FromBody] PlantModel model)
         => await Mediator.Send(new CreatePlant {Model = model});
+
+    [HttpPut("{id}/{gardenId}")]
+    public async Task<IActionResult> UpdatePlant([FromQuery] int id ,[FromQuery] int gardenId, [FromBody] PlantModel model)
+        => await Mediator.Send(new UpdatePlant {Id = id, GardenId = gardenId, PlantModel = model});
+
+    [HttpDelete("{id/{gardenId}}")]
+    public async Task<IActionResult> DeletePlant([FromQuery] int id, [FromQuery] int gardenId)
+        => await Mediator.Send(new DeletePlant {Id = id, GardenId = gardenId});
 
 }

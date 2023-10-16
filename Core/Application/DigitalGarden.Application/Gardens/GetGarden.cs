@@ -6,7 +6,7 @@ namespace DigitalGarden.Application;
 
 public class GetGarden : IRequest<IActionResult>
 {
-    public required GardenerModel Gardener { get; set; }
+    public required int GardenerId { get; set; }
     public int? Id { get; set; }
 }
 public class GetGardenHandler : IRequestHandler<GetGarden, IActionResult>
@@ -25,7 +25,7 @@ public class GetGardenHandler : IRequestHandler<GetGarden, IActionResult>
         }
 
         var garden = BaseContext.Gardens.Where(g => request.Id == g.Id &&
-        request.Gardener.Id == g.GardenerId).FirstOrDefault();
+        request.GardenerId == g.GardenerId).FirstOrDefault();
         return Task.FromResult(garden == null ? new BadRequestResult() as IActionResult
             : new OkObjectResult(garden) as IActionResult);
     }
