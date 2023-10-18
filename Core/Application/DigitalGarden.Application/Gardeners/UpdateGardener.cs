@@ -6,6 +6,7 @@ namespace DigitalGarden.Application;
 
 public class UpdateGardener : IRequest<IActionResult>
 {
+    public int Id {get; set;}
     public required GardenerModel Model {get; set;}
 }
 public class UpdateGardenerHandler : IRequestHandler<UpdateGardener, IActionResult>
@@ -16,7 +17,7 @@ public class UpdateGardenerHandler : IRequestHandler<UpdateGardener, IActionResu
     public BaseDigitalGardenContext BaseContext {get;}
     Task<IActionResult> IRequestHandler<UpdateGardener, IActionResult>.Handle(UpdateGardener request, CancellationToken cancellationToken)
     {
-        var gardener = BaseContext.Gardeners.Where(g => g.Id ==request.Model.Id).FirstOrDefault();
+        var gardener = BaseContext.Gardeners.Where(g => g.Id == request.Id).FirstOrDefault();
         if(gardener == null)
             return Task.FromResult(new BadRequestObjectResult("Gardener cannot be found") as IActionResult);
         gardener.Name = request.Model.Name;
